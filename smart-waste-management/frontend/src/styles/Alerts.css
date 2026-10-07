@@ -1,0 +1,135 @@
+.alerts {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.alerts h2 {
+  margin-bottom: 24px;
+  color: var(--text-primary, #0f172a);
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.no-alerts {
+  background: var(--bg-card, #fff);
+  border: 1px solid #a7f3d0;
+  border-radius: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.no-alerts p {
+  color: #065f46;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.alert-item {
+  background: #fff;
+  border: 1px solid var(--border, #e2e8f0);
+  border-left: 5px solid #0284c7;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  animation: slideIn 0.25s ease-out;
+}
+
+.alert-item:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.alert-item.full {
+  border-left-color: #ef4444;
+  background: #fffafa;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-content h3 {
+  color: var(--text-primary, #0f172a);
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-content p {
+  color: var(--text-secondary, #475569);
+  margin: 4px 0;
+  font-size: 13.5px;
+}
+
+.timestamp {
+  font-size: 12px !important;
+  color: var(--text-muted, #94a3b8) !important;
+  margin-top: 6px !important;
+}
+
+.dismiss-btn {
+  padding: 8px 16px;
+  background: #fff;
+  color: #ef4444;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dismiss-btn:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgb(239 68 68 / 25%);
+}
+
+@media (width <= 768px) {
+  .alert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .dismiss-btn {
+    width: 100%;
+  }
+}

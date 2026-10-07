@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "install": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "start": "npm run dev",
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm run dev\"",
+    "build": "cd frontend && npm run build",
+    "lint": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0"
+  }
+}
